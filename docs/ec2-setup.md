@@ -1,43 +1,82 @@
-# EC2 Setup Documentation
+# Deployment Steps
 
-## AWS Region
-ap-south-1 (Mumbai)
+## Connect To EC2
 
-## Instance Type
-t2.micro
+```bash
+ssh -i incident-response-key.pem ubuntu@PUBLIC_IP
+```
 
-## OS
-Ubuntu 24.04 LTS
+---
+
+## Activate Python Virtual Environment
+
+```bash
+source venv/bin/activate
+```
+
+---
+
+## Run Flask Application
+
+```bash
+python app.py
+```
+
+---
+
+## Test Application
+
+```text
+http://PUBLIC_IP:5000
+```
+
+---
 
 # Issues Faced
 
-## SSH Timeout Issue
+## SSH Connection Timeout
+
 ### Cause
-Security group missing SSH rule.
+Port 22 was blocked in Security Group.
 
 ### Fix
-Allowed port 22 in inbound rules.
+Allowed SSH inbound rule.
 
 ---
 
 ## Flask Public Access Issue
+
 ### Cause
-Flask bound to localhost only.
+Flask app was listening only on localhost.
 
 ### Fix
-Used:
+
 ```python
 app.run(host="0.0.0.0", port=5000)
 ```
 
 ---
 
-## Port Conflict Issue
-### Cause
-Flask already running on port 5000.
+## Port 5000 Already In Use
 
-### Fix
-Verified running process using:
+### Cause
+Flask application already running in background.
+
+### Verification
+
 ```bash
 sudo ss -tulnp | grep 5000
+```
+
+---
+
+## Python Command Not Found
+
+### Cause
+Virtual environment was not activated.
+
+### Fix
+
+```bash
+source venv/bin/activate
 ```
