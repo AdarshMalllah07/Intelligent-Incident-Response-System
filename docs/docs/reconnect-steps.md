@@ -43,7 +43,7 @@ source venv/bin/activate
 
 ```bash
 python app.py
-```
+``` 
 
 ---
 

@@ -1,14 +1,20 @@
-# Current Architecture
+# Architecture
 
 ```text
-Browser
+Internet
    ↓
-Public Internet
+Nginx Reverse Proxy
    ↓
-AWS EC2 Ubuntu Server
+Flask Application Service
    ↓
-Flask Application
+Ubuntu EC2 Server
+   ↓
+CloudWatch Agent
+   ↓
+AWS CloudWatch Monitoring
 ```
+
+---
 
 # Components
 
@@ -16,11 +22,17 @@ Flask Application
 Cloud-hosted Linux server.
 
 ## Flask
-Backend application framework.
+Backend application service.
 
-## Python Virtual Environment
-Dependency isolation.
+## systemd
+Linux service manager controlling Flask lifecycle.
 
-## Security Groups
-AWS firewall controlling traffic access.
+## Nginx
+Reverse proxy handling public traffic.
+
+## CloudWatch Agent
+Collects server metrics and telemetry.
+
+## CloudWatch
+AWS monitoring and observability platform.
 ```
