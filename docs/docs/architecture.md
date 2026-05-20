@@ -36,3 +36,25 @@ Collects server metrics and telemetry.
 ## CloudWatch
 AWS monitoring and observability platform.
 ```
+
+# Extended Incident Response Architecture
+
+```text
+Internet
+   ↓
+Nginx Reverse Proxy
+   ↓
+Flask Application Service
+   ↓
+Ubuntu EC2 Server
+   ↓
+CloudWatch Agent
+   ↓
+CloudWatch Monitoring
+   ↓
+CloudWatch Alarm
+   ↓
+SNS Notifications
+   ↓
+Auto Remediation Script
+```
