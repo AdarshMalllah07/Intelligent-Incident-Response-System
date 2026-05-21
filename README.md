@@ -169,4 +169,65 @@ CloudWatch Alarm
 SNS Notifications
    ↓
 Automation Scripts
+
+## Centralized Logging & Incident Analysis
+
+### Logging Features Implemented
+
+- Flask application logging
+- Nginx access logging
+- CloudWatch centralized log collection
+- Application error simulation
+- Operational event tracking
+
+---
+
+## Log Sources
+
+| Source | Purpose |
+|---|---|
+| Flask Application Logs | Track application activity and errors |
+| Nginx Access Logs | Track incoming traffic and scanners |
+| CloudWatch Logs | Centralized cloud log storage |
+
+---
+
+## Flask Logging Features
+
+The Flask application now records:
+
+- incoming requests
+- health check requests
+- simulated errors
+- operational activity
+
+---
+
+## Incident Analysis Features
+
+The system now supports:
+
+- application troubleshooting
+- traffic analysis
+- scanner detection
+- operational debugging
+- centralized observability
+
+---
+
+## Current Observability Architecture
+
+```text
+Internet
+   ↓
+Nginx Reverse Proxy
+   ↓
+Flask Application Service
+   ↓
+Application Logs
+   ↓
+CloudWatch Agent
+   ↓
+CloudWatch Logs
+```
 ```

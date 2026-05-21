@@ -57,4 +57,20 @@ CloudWatch Alarm
 SNS Notifications
    ↓
 Auto Remediation Script
+
+# Logging & Observability Architecture
+
+```text
+Internet
+   ↓
+Nginx Reverse Proxy
+   ↓
+Flask Application Service
+   ↓
+Flask Logs + Nginx Logs
+   ↓
+CloudWatch Agent
+   ↓
+CloudWatch Logs
+```
 ```
