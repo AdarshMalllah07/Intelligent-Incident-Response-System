@@ -74,3 +74,18 @@ CloudWatch Agent
 CloudWatch Logs
 ```
 ```
+# Security Monitoring Architecture
+
+```text
+Internet
+   ↓
+Nginx Reverse Proxy
+   ↓
+Nginx Access Logs
+   ↓
+Security Detection Scripts
+   ↓
+Security Incident Logs
+   ↓
+Threat Analysis
+```

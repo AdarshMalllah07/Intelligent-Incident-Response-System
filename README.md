@@ -229,5 +229,64 @@ Application Logs
 CloudWatch Agent
    ↓
 CloudWatch Logs
+
 ```
 ```
+## Security Monitoring & Intrusion Detection
+
+### Security Features Implemented
+
+- Nginx traffic monitoring
+- Suspicious request detection
+- Attack pattern scanning
+- Security incident logging
+- Basic intrusion detection automation
+
+---
+
+## Threat Detection Capabilities
+
+The system currently detects:
+
+- phpunit vulnerability scans
+- WordPress probing attempts
+- xmlrpc attack attempts
+- suspicious vendor scans
+- CGI exploit scanning
+
+---
+
+## Security Monitoring Workflow
+
+```text
+Internet Traffic
+      ↓
+Nginx Access Logs
+      ↓
+Security Detection Scripts
+      ↓
+Security Incident Logs
+      ↓
+Threat Analysis
+```
+
+---
+
+## Security Components
+
+| Component | Purpose |
+|---|---|
+| Nginx Access Logs | Capture incoming traffic |
+| Attack Detection Script | Detect suspicious requests |
+| Security Alert Script | Generate threat alerts |
+| Security Incident Logs | Store detected incidents |
+
+---
+
+## Security Automation Features
+
+- suspicious request scanning
+- automated threat detection
+- incident logging
+- security alert generation
+- live traffic analysis
