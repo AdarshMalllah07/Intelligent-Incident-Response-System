@@ -290,3 +290,51 @@ Threat Analysis
 - incident logging
 - security alert generation
 - live traffic analysis
+
+## Infrastructure as Code (Terraform)
+
+### Terraform Features
+
+- Automated EC2 provisioning
+- Automated security group creation
+- Reproducible infrastructure deployment
+- Infrastructure lifecycle management
+- Infrastructure state management
+
+---
+
+## Terraform Components
+
+| File | Purpose |
+|---|---|
+| provider.tf | AWS provider configuration |
+| variables.tf | Reusable variables |
+| main.tf | Infrastructure resources |
+| outputs.tf | Infrastructure outputs |
+| terraform.tfvars | Variable values |
+
+---
+
+## Terraform Workflow
+
+```text
+Terraform Configuration
+        ↓
+terraform init
+        ↓
+terraform plan
+        ↓
+terraform apply
+        ↓
+AWS Infrastructure Created
+```
+
+---
+
+## Infrastructure Provisioned
+
+- EC2 Ubuntu server
+- Security groups
+- HTTP access
+- SSH access
+- outbound networking

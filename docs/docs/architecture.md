@@ -89,3 +89,15 @@ Security Incident Logs
    ↓
 Threat Analysis
 ```
+
+# Infrastructure Provisioning Architecture
+
+```text
+Terraform Configuration
+        ↓
+AWS Provider
+        ↓
+EC2 Infrastructure
+        ↓
+Monitoring + Automation Stack
+```
