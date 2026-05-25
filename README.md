@@ -1,4 +1,6 @@
-Intelligent-Incident-Response-System
+# Intelligent Incident Response System
+
+Production-inspired backend and infrastructure monitoring platform focused on automated incident detection, centralized logging, cloud observability, Linux operations, security monitoring, and auto-remediation workflows using AWS, Flask, PostgreSQL, Nginx, and GitHub Actions.
 ## Current Progress
 
 ### Infrastructure Setup Completed
